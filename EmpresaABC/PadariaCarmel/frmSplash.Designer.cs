@@ -93,8 +93,10 @@ namespace PadariaCarmel
             this.Controls.Add(this.lblCarregando);
             this.Controls.Add(this.pctLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmSplash";
             this.Text = "Padaria - Splash";
+            this.Load += new System.EventHandler(this.frmSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

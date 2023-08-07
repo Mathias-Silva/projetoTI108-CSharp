@@ -34,10 +34,10 @@ namespace PadariaCarmel
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbSoma = new System.Windows.Forms.RadioButton();
-            this.rdbSubtracao = new System.Windows.Forms.RadioButton();
-            this.rdbMultiplicacao = new System.Windows.Forms.RadioButton();
             this.rdbDivisao = new System.Windows.Forms.RadioButton();
+            this.rdbMultiplicacao = new System.Windows.Forms.RadioButton();
+            this.rdbSubtracao = new System.Windows.Forms.RadioButton();
+            this.rdbSoma = new System.Windows.Forms.RadioButton();
             this.lblNum1 = new System.Windows.Forms.Label();
             this.lblNum2 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
@@ -101,31 +101,18 @@ namespace PadariaCarmel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operações";
             // 
-            // rdbSoma
+            // rdbDivisao
             // 
-            this.rdbSoma.AutoSize = true;
-            this.rdbSoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbSoma.Location = new System.Drawing.Point(111, 46);
-            this.rdbSoma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rdbSoma.Name = "rdbSoma";
-            this.rdbSoma.Size = new System.Drawing.Size(69, 24);
-            this.rdbSoma.TabIndex = 0;
-            this.rdbSoma.TabStop = true;
-            this.rdbSoma.Text = "Soma";
-            this.rdbSoma.UseVisualStyleBackColor = true;
-            // 
-            // rdbSubtracao
-            // 
-            this.rdbSubtracao.AutoSize = true;
-            this.rdbSubtracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbSubtracao.Location = new System.Drawing.Point(111, 109);
-            this.rdbSubtracao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rdbSubtracao.Name = "rdbSubtracao";
-            this.rdbSubtracao.Size = new System.Drawing.Size(101, 24);
-            this.rdbSubtracao.TabIndex = 1;
-            this.rdbSubtracao.TabStop = true;
-            this.rdbSubtracao.Text = "Subtração";
-            this.rdbSubtracao.UseVisualStyleBackColor = true;
+            this.rdbDivisao.AutoSize = true;
+            this.rdbDivisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbDivisao.Location = new System.Drawing.Point(111, 228);
+            this.rdbDivisao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbDivisao.Name = "rdbDivisao";
+            this.rdbDivisao.Size = new System.Drawing.Size(78, 24);
+            this.rdbDivisao.TabIndex = 3;
+            this.rdbDivisao.TabStop = true;
+            this.rdbDivisao.Text = "Divisão";
+            this.rdbDivisao.UseVisualStyleBackColor = true;
             // 
             // rdbMultiplicacao
             // 
@@ -140,18 +127,31 @@ namespace PadariaCarmel
             this.rdbMultiplicacao.Text = "Multiplicação";
             this.rdbMultiplicacao.UseVisualStyleBackColor = true;
             // 
-            // rdbDivisao
+            // rdbSubtracao
             // 
-            this.rdbDivisao.AutoSize = true;
-            this.rdbDivisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDivisao.Location = new System.Drawing.Point(111, 228);
-            this.rdbDivisao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rdbDivisao.Name = "rdbDivisao";
-            this.rdbDivisao.Size = new System.Drawing.Size(78, 24);
-            this.rdbDivisao.TabIndex = 3;
-            this.rdbDivisao.TabStop = true;
-            this.rdbDivisao.Text = "Divisão";
-            this.rdbDivisao.UseVisualStyleBackColor = true;
+            this.rdbSubtracao.AutoSize = true;
+            this.rdbSubtracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSubtracao.Location = new System.Drawing.Point(111, 109);
+            this.rdbSubtracao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbSubtracao.Name = "rdbSubtracao";
+            this.rdbSubtracao.Size = new System.Drawing.Size(101, 24);
+            this.rdbSubtracao.TabIndex = 1;
+            this.rdbSubtracao.TabStop = true;
+            this.rdbSubtracao.Text = "Subtração";
+            this.rdbSubtracao.UseVisualStyleBackColor = true;
+            // 
+            // rdbSoma
+            // 
+            this.rdbSoma.AutoSize = true;
+            this.rdbSoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSoma.Location = new System.Drawing.Point(111, 46);
+            this.rdbSoma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbSoma.Name = "rdbSoma";
+            this.rdbSoma.Size = new System.Drawing.Size(69, 24);
+            this.rdbSoma.TabIndex = 0;
+            this.rdbSoma.TabStop = true;
+            this.rdbSoma.Text = "Soma";
+            this.rdbSoma.UseVisualStyleBackColor = true;
             // 
             // lblNum1
             // 
@@ -224,6 +224,7 @@ namespace PadariaCarmel
             this.MinimizeBox = false;
             this.Name = "frmCalcula";
             this.Text = "Padaria - Calculadora";
+            this.Load += new System.EventHandler(this.frmCalcula_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
