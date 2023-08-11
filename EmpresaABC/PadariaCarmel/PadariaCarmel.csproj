@@ -126,6 +126,9 @@
     <EmbeddedResource Include="frmCalcula.resx">
       <DependentUpon>frmCalcula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmComponentes.resx">
+      <DependentUpon>frmComponentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionarios.resx">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>

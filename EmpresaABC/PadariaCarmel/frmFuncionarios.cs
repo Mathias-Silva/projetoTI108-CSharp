@@ -22,9 +22,16 @@ namespace PadariaCarmel
         static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
+       
         public frmFuncionarios()
         {
             InitializeComponent();
+        }
+
+        public frmFuncionarios(string nome)
+        {
+            InitializeComponent();
+            txtNome.Text = nome;
         }
 
         private void frmFuncionarios_Load(object sender, EventArgs e)
@@ -176,7 +183,8 @@ namespace PadariaCarmel
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
-            abrir.ShowDialog();
+            abrir.Show();
+            this.Hide();
         }
     }
 }

@@ -30,3 +30,4 @@ C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\Empres
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.CoreCompileInputs.cache
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.exe
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.pdb
+C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmComponentes.resources

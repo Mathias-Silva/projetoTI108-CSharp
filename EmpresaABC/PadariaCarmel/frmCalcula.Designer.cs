@@ -206,7 +206,7 @@ namespace PadariaCarmel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 461);
+            this.ClientSize = new System.Drawing.Size(780, 461);
             this.Controls.Add(this.txtNum1);
             this.Controls.Add(this.txtNum2);
             this.Controls.Add(this.lblResposta);
@@ -223,6 +223,7 @@ namespace PadariaCarmel
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimizeBox = false;
             this.Name = "frmCalcula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Padaria - Calculadora";
             this.Load += new System.EventHandler(this.frmCalcula_Load);
             this.groupBox1.ResumeLayout(false);

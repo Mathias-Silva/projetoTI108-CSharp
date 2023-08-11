@@ -44,7 +44,7 @@ namespace PadariaCarmel
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(279, 94);
+            this.lblUsuario.Location = new System.Drawing.Point(396, 137);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace PadariaCarmel
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(279, 167);
+            this.lblSenha.Location = new System.Drawing.Point(396, 210);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(56, 20);
             this.lblSenha.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace PadariaCarmel
             // pctLogo
             // 
             this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(56, 94);
+            this.pctLogo.Location = new System.Drawing.Point(173, 137);
             this.pctLogo.Name = "pctLogo";
             this.pctLogo.Size = new System.Drawing.Size(199, 194);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -73,7 +73,7 @@ namespace PadariaCarmel
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(282, 265);
+            this.btnEntrar.Location = new System.Drawing.Point(399, 308);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(87, 24);
             this.btnEntrar.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace PadariaCarmel
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(395, 264);
+            this.btnSair.Location = new System.Drawing.Point(512, 307);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(87, 24);
             this.btnSair.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace PadariaCarmel
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(282, 123);
+            this.txtUsuario.Location = new System.Drawing.Point(399, 166);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(188, 20);
             this.txtUsuario.TabIndex = 0;
@@ -103,7 +103,7 @@ namespace PadariaCarmel
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtSenha.Location = new System.Drawing.Point(282, 209);
+            this.txtSenha.Location = new System.Drawing.Point(399, 252);
             this.txtSenha.MaxLength = 30;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';

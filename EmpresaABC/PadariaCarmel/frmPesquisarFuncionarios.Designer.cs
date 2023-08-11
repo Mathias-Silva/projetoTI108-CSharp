@@ -31,10 +31,10 @@ namespace PadariaCarmel
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisarFuncionarios));
             this.gpbPesquisar = new System.Windows.Forms.GroupBox();
-            this.rdbCodigo = new System.Windows.Forms.RadioButton();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
-            this.lbDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lbDescricao = new System.Windows.Forms.Label();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
             this.lstPesquisar = new System.Windows.Forms.ListBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -55,25 +55,12 @@ namespace PadariaCarmel
             this.gpbPesquisar.TabStop = false;
             this.gpbPesquisar.Text = "Pesquisar por";
             // 
-            // rdbCodigo
+            // txtDescricao
             // 
-            this.rdbCodigo.AutoSize = true;
-            this.rdbCodigo.Location = new System.Drawing.Point(92, 28);
-            this.rdbCodigo.Name = "rdbCodigo";
-            this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
-            this.rdbCodigo.TabIndex = 1;
-            this.rdbCodigo.Text = "Código";
-            this.rdbCodigo.UseVisualStyleBackColor = true;
-            // 
-            // rdbNome
-            // 
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(193, 28);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(69, 24);
-            this.rdbNome.TabIndex = 2;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
+            this.txtDescricao.Location = new System.Drawing.Point(193, 81);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(237, 26);
+            this.txtDescricao.TabIndex = 3;
             // 
             // lbDescricao
             // 
@@ -84,12 +71,27 @@ namespace PadariaCarmel
             this.lbDescricao.TabIndex = 2;
             this.lbDescricao.Text = "Descrição";
             // 
-            // txtDescricao
+            // rdbNome
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(193, 81);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(237, 26);
-            this.txtDescricao.TabIndex = 3;
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(193, 28);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(69, 24);
+            this.rdbNome.TabIndex = 2;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
+            this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
+            // 
+            // rdbCodigo
+            // 
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(92, 28);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
+            this.rdbCodigo.TabIndex = 1;
+            this.rdbCodigo.Text = "Código";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
+            this.rdbCodigo.CheckedChanged += new System.EventHandler(this.rdbCodigo_CheckedChanged);
             // 
             // lstPesquisar
             // 
