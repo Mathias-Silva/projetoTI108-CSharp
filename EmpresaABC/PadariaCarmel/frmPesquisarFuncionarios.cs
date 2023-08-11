@@ -53,6 +53,7 @@ namespace PadariaCarmel
             lstPesquisar.Items.Clear();
             txtDescricao.Focus();
         }
+        //teste
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
