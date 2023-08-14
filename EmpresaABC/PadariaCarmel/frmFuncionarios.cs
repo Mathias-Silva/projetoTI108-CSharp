@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //importar a classe
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace PadariaCarmel
 {
@@ -95,6 +96,7 @@ namespace PadariaCarmel
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            cadastrarFuncionario();
             MessageBox.Show("Cadastrado como sucesso!!!", 
                 "Mensagem do sistema",
                 MessageBoxButtons.OK,
@@ -103,6 +105,30 @@ namespace PadariaCarmel
             desabilitarCampos();
             btnNovo.Enabled = true;
             limparCampos();
+        }
+
+        //Cadastrar funcionarios
+        public void cadastrarFuncionario()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText= "insert into tbFuncionarios (nome,email,telCel,cpf,endereco,numero,bairro,cidade,estado,cep)values(@nome,@email,@telCel,@cpf,@endereco,@numero,@bairro,@cidade,@estado,@cep);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome",MySqlDbType.VarChar,100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@telCel", MySqlDbType.VarChar, 15).Value =mskTelefone.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCEP.Text;
+
+            comm.Connection = Conectar.obterConexao();
+            int res = comm.ExecuteNonQuery();
+            Conectar.fecharConexao();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -187,5 +213,7 @@ namespace PadariaCarmel
             this.Hide();
             //teste
         }
+
+        
     }
 }
