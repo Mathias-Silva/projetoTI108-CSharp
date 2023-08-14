@@ -185,6 +185,7 @@ namespace PadariaCarmel
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
             abrir.Show();
             this.Hide();
+            //teste
         }
     }
 }
