@@ -19,3 +19,8 @@ estado char(2),
 cep char(9),
 primary key(codFunc)
 );
+insert into tbFuncionarios (nome,email,telCel,cpf,endereco,numero,bairro,cidade,estado,cep)values('Tonhao Moto Moto','tonhao.motomoto@gmail.com','(11) 93473-2923','255.2555.255-00','Rua Dr. Antônio Bento','355','Santo Amaro','São Paulo','sp','04750-000');
+
+
+desc tbFuncionarios;
+select * from tbFuncionarios;

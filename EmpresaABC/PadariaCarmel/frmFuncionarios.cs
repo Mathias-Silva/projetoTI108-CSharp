@@ -41,11 +41,13 @@ namespace PadariaCarmel
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
             desabilitarCampos();
+            // pesquisarCodigo();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
             habilitarCampos();
+            pesquisarCodigo();
         }
         //desabilitar campos
         public void desabilitarCampos()
@@ -96,6 +98,22 @@ namespace PadariaCarmel
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") ||
+                txtCidade.Text.Equals("") || txtBairro.Text.Equals("") ||
+                txtNumero.Text.Equals("") || txtEndereco.Text.Equals("")
+                || mskTelefone.Text.Equals("(  )      -") || mskCEP.Text.Equals("     -")
+                || mskCPF.Text.Equals("   .   .   -") || cbbEstado.Text.Equals(""))
+            {
+                MessageBox.Show("Preenchimento obrigatório",
+               "Mensagem do sistema",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Error,
+               MessageBoxDefaultButton.Button1);
+                txtNome.Focus();
+            }
+            else
+            {
+
             cadastrarFuncionario();
             MessageBox.Show("Cadastrado como sucesso!!!", 
                 "Mensagem do sistema",
@@ -105,6 +123,7 @@ namespace PadariaCarmel
             desabilitarCampos();
             btnNovo.Enabled = true;
             limparCampos();
+            }
         }
 
         //Cadastrar funcionarios
@@ -129,6 +148,25 @@ namespace PadariaCarmel
             comm.Connection = Conectar.obterConexao();
             int res = comm.ExecuteNonQuery();
             Conectar.fecharConexao();
+        }
+
+        //pesquisar por codigo
+
+        public void pesquisarCodigo()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codfunc+1 from tbfuncionarios order by codfunc desc;";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conectar.obterConexao();
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = DR.GetInt32(0).ToString();
+            Conectar.fecharConexao();
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -157,6 +195,7 @@ namespace PadariaCarmel
             txtEmail.Clear();
             txtNumero.Clear();
             txtCidade.Clear();
+            txtCodigo.Clear();
 
             mskCEP.Clear();
             mskCPF.Clear();
