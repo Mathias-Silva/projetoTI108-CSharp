@@ -374,6 +374,7 @@ namespace PadariaCarmel
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(348, 26);
             this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
