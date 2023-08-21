@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //importar a classe
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
+
 
 namespace PadariaCarmel
 {
@@ -36,8 +38,8 @@ namespace PadariaCarmel
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (txtUsuario.Text.Equals("senac") && txtSenha.Text.Equals("senac"))
+            bool result = acessoSistema(txtUsuario.Text, txtSenha.Text);
+            if (result)
             {
 
                 frmMenuPrincipal abrir = new frmMenuPrincipal();
@@ -87,6 +89,50 @@ namespace PadariaCarmel
             IntPtr hMenu = GetSystemMenu(this.Handle, false);
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
+        }
+
+        //busca usuario e senha se existe no banco de dados
+
+        public bool acessoSistema(string nome, string senha)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbUsuarios where nome = @nome and senha = @senha;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 50).Value = nome;
+            comm.Parameters.Add("@senha", MySqlDbType.VarChar, 14).Value = senha;
+
+            comm.Connection = Conectar.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            bool resultado = DR.HasRows;
+
+            Conectar.fecharConexao();
+            return resultado;
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            bool result = acessoSistema(txtUsuario.Text, txtSenha.Text);
+            if (result)
+            {
+
+                frmMenuPrincipal abrir = new frmMenuPrincipal();
+                abrir.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos.",
+                "Mensagem do sistema",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1);
+                limparTela();
+            }
         }
     }
 }

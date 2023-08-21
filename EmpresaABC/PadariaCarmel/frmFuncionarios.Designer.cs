@@ -134,6 +134,7 @@ namespace PadariaCarmel
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -219,7 +220,7 @@ namespace PadariaCarmel
             this.cbbEstado.Location = new System.Drawing.Point(459, 320);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(121, 28);
-            this.cbbEstado.TabIndex = 22;
+            this.cbbEstado.TabIndex = 10;
             // 
             // lblCEP
             // 

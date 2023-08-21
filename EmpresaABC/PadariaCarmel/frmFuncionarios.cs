@@ -223,7 +223,7 @@ namespace PadariaCarmel
         public void alterarFuncionario(int codigo)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "update tbFuncionarios set nome = @nome, email=@email, telCel = @telCel, cpf = @cpf, endereco=@endereco,numero=@numero,bairro=@bairro,cidade=@cidade,estado=@estado, cep = @cep where codFunc = "+codigo+";";
+            comm.CommandText = "update tbFuncionarios set nome = @nome, email=@email, telCel = @telCel, cpf = @cpf, endereco=@endereco,numero=@numero,bairro=@bairro,cidade=@cidade,estado=@estado, cep = @cep where codFunc = " + codigo + ";";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
@@ -352,6 +352,47 @@ namespace PadariaCarmel
             Conectar.fecharConexao();
 
 
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resp = MessageBox.Show("Deseja excluir?",
+                "Mensagem do sistema",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+
+            if (resp == DialogResult.Yes)
+            {
+                excluirFuncionario(Convert.ToInt32(txtCodigo.Text));
+                MessageBox.Show("Excluido com sucesso!!",
+               "Mensagem do sistema",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                limparCampos();
+                desabilitarCampos();
+                btnNovo.Enabled = true;
+            }
+            else
+            {
+                txtNome.Focus();
+            }
+        }
+        //Excluir funcionarios
+        public void excluirFuncionario(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "delete from tbFuncionarios where codFunc=@codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32, 11).Value =codigo;
+         
+
+            comm.Connection = Conectar.obterConexao();
+            int res = comm.ExecuteNonQuery();
+
+            Conectar.fecharConexao();
+            
         }
     }
 
