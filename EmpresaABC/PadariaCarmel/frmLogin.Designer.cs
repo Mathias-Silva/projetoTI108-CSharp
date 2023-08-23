@@ -73,9 +73,9 @@ namespace PadariaCarmel
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(399, 308);
+            this.btnEntrar.Location = new System.Drawing.Point(399, 302);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(87, 24);
+            this.btnEntrar.Size = new System.Drawing.Size(86, 29);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "&Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@ namespace PadariaCarmel
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(512, 307);
+            this.btnSair.Location = new System.Drawing.Point(501, 302);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(87, 24);
+            this.btnSair.Size = new System.Drawing.Size(86, 29);
             this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sai&r";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@ namespace PadariaCarmel
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtSenha.Location = new System.Drawing.Point(399, 252);
+            this.txtSenha.Location = new System.Drawing.Point(399, 245);
             this.txtSenha.MaxLength = 30;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';

@@ -54,3 +54,4 @@ C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\Empres
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\bin\x64\Debug\System.Numerics.Vectors.xml
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.CopyComplete
+C:\Users\mathias.ssantos\Documents\Visual Studio 2019\projetoTI108-CSharp\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmCadastrarUsuarios.resources
