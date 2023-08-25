@@ -46,9 +46,11 @@ namespace PadariaCarmel
             this.pnlCrud = new System.Windows.Forms.Panel();
             this.btnNovo = new System.Windows.Forms.Button();
             this.pnlFuncionario = new System.Windows.Forms.Panel();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lstFuncNCad = new System.Windows.Forms.ListBox();
+            this.lblCodFunc = new System.Windows.Forms.Label();
             this.lblFuncNCat = new System.Windows.Forms.Label();
+            this.lstFuncNCad = new System.Windows.Forms.ListBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtCodFunc = new System.Windows.Forms.TextBox();
             this.pnlCrud.SuspendLayout();
             this.pnlFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -227,6 +229,8 @@ namespace PadariaCarmel
             // 
             // pnlFuncionario
             // 
+            this.pnlFuncionario.Controls.Add(this.txtCodFunc);
+            this.pnlFuncionario.Controls.Add(this.lblCodFunc);
             this.pnlFuncionario.Controls.Add(this.lblFuncNCat);
             this.pnlFuncionario.Controls.Add(this.lstFuncNCad);
             this.pnlFuncionario.Controls.Add(this.txtContraSenha);
@@ -243,23 +247,13 @@ namespace PadariaCarmel
             this.pnlFuncionario.Size = new System.Drawing.Size(776, 478);
             this.pnlFuncionario.TabIndex = 0;
             // 
-            // lblCodigo
+            // lblCodFunc
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(34, 35);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código";
-            // 
-            // lstFuncNCad
-            // 
-            this.lstFuncNCad.FormattingEnabled = true;
-            this.lstFuncNCad.ItemHeight = 20;
-            this.lstFuncNCad.Location = new System.Drawing.Point(481, 124);
-            this.lstFuncNCad.Name = "lstFuncNCad";
-            this.lstFuncNCad.Size = new System.Drawing.Size(228, 204);
-            this.lstFuncNCad.TabIndex = 11;
+            this.lblCodFunc.AutoSize = true;
+            this.lblCodFunc.Location = new System.Drawing.Point(287, 35);
+            this.lblCodFunc.Name = "lblCodFunc";
+            this.lblCodFunc.Size = new System.Drawing.Size(0, 20);
+            this.lblCodFunc.TabIndex = 13;
             // 
             // lblFuncNCat
             // 
@@ -269,6 +263,32 @@ namespace PadariaCarmel
             this.lblFuncNCat.Size = new System.Drawing.Size(230, 20);
             this.lblFuncNCat.TabIndex = 12;
             this.lblFuncNCat.Text = "Funcionarios não  Cadastrados";
+            // 
+            // lstFuncNCad
+            // 
+            this.lstFuncNCad.FormattingEnabled = true;
+            this.lstFuncNCad.ItemHeight = 20;
+            this.lstFuncNCad.Location = new System.Drawing.Point(481, 124);
+            this.lstFuncNCad.Name = "lstFuncNCad";
+            this.lstFuncNCad.Size = new System.Drawing.Size(228, 204);
+            this.lstFuncNCad.TabIndex = 11;
+            this.lstFuncNCad.SelectedIndexChanged += new System.EventHandler(this.lstFuncNCad_SelectedIndexChanged);
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(34, 35);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código";
+            // 
+            // txtCodFunc
+            // 
+            this.txtCodFunc.Location = new System.Drawing.Point(230, 78);
+            this.txtCodFunc.Name = "txtCodFunc";
+            this.txtCodFunc.Size = new System.Drawing.Size(100, 26);
+            this.txtCodFunc.TabIndex = 14;
             // 
             // frmCadastrarUsuarios
             // 
@@ -311,5 +331,7 @@ namespace PadariaCarmel
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblFuncNCat;
         private System.Windows.Forms.ListBox lstFuncNCad;
+        private System.Windows.Forms.Label lblCodFunc;
+        private System.Windows.Forms.TextBox txtCodFunc;
     }
 }
